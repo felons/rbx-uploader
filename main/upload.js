@@ -8,11 +8,6 @@
 
 const rbx = require("noblox.js");
 const fs = require("fs")
-function log() {
-    rbx.cookieLogin("token").then(function () {
-        rbx.uploadModel(fs.createReadStream("filename.rbxl"), {}, id)
-});
-    console.log("worked")
-    createspam()
-}
-log()
+rbx.cookieLogin("token")
+rbx.uploadModel(fs.createReadStream("filename.rbxl"), {}, id)
+console.log("worked")
